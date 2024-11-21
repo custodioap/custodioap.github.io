@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.vertical-section{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .image-cropped-transform {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transform: scale(0.7) translate(0, 20%);
+} */
+
+main {
+  overflow-x: hidden;
+  display: flex;
+  position: sticky;
+  top:0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  font-size: 4ch;
+}
+
+/* section:nth-child(even) {
+  background-color: teal;
+  color: white;
+} */
