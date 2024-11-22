@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html lang="en" class="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>AC</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -58,23 +58,6 @@
             </div>
         </nav>
 
-        <!-- {{-- <main class="w-full flex">
-            <img class="h-[500px] ms-auto" src="{{asset('assets/images/image.png')}}" alt="no image">
-        </main> --}} -->
-
-        <!-- {{-- <div class="vertical-section">
-            <canvas id="demo-canvas"></canvas>
-           <div class="w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
-                    <div class="content-center text-center" data-aos="zoom-in-right">
-                        <h1 class="p-5 font-bold text-4xl">Lorem ipsum dolor sit amet </h1>
-                        <p class="text-lg text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                    <div class="content-center" data-aos="fade-left" data-aos-offset="500" data-aos-duration="500">
-                        <img class="h-[100vh] ms-auto" src="{{asset('assets/images/me.png')}}" alt="no image">
-                    </div>
-
-                </div>
-          </div> --}} -->
           <div class="relative vertical-section">
             <!-- Canvas Background -->
             <canvas id="demo-canvas" class="absolute inset-0 w-full h-full"></canvas>
@@ -98,14 +81,9 @@
                 <div class="grid md:grid-cols-5 sm:grid-cols-2 gap-32 my-5" data-aos="zoom-in" data-aos-duration="700" >
                     <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="no image">
                     <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"  alt="no image">
-
                     <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-
                     <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-
                     <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-
-
                 </div>
                 <div class="grid md:grid-cols-5 sm:grid-cols-2 gap-32 mt-5" data-aos="zoom-in" data-aos-duration="1000">
                     <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
@@ -133,26 +111,28 @@
                 <div class="relative w-full mx-auto">
                     <img class="h-full w-full object-cover" src="./assets/images/makati.jpg" alt="no image">
                     <div class="absolute inset-0 bg-sky-500 opacity-80"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="grid grid-cols-2 gap-6 flex align-center">
                             <div class="content-center text-center" data-aos="fade-right" data-aos-duration="2000">
-                                <h1 class="p-5 font-bold text-4xl text-white">Lorem ipsum dolor sit amet </h1>
-                                <p class="text-lg text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <h1 class="p-5 font-bold text-4xl text-white">MakatiZen Mobile App</h1>
+                                <p class="text-lg text-white p-5">Developed an App for Makati Citizens (MakatiZen) way back 2017 for version 1 with 100k+ installs and recently for the updated version 2.</p>
                                 <!-- stacks used -->
-                                <div class="bg-gray-100 p-5 justify-content-center grid md:grid-cols-4 sm:grid-cols-2 gap-0 mt-5 rounded-r-lg shadow-xl" data-aos="fade-right" data-aos-duration="1000">
-                                    <img class="h-[60px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
-                                    <img class="h-[60px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-                                    <img class="h-[60px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
-                                    <img class="h-[60px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
-                                    <!-- <img class="h-[60px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" /> -->
+                                <div class="flex justify-center space-x-5 mt-5">
+                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
+                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
                                 </div>
+                                
+                                
                             </div>
                             <div class="h-[100vh] content-center" data-aos="fade-left" data-aos-duration="2000">
-                                <img class="h-[80%] mx-auto" src="./assets/images/mobile-ic.png" alt="no image">
+                                <img class="h-[80%] mx-auto" src="./assets/images/makatizen-app.png" alt="no image">
                             </div>
                         </div>
                     </div>
                 </div>
+                
 
 
               </section>
