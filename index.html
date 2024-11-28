@@ -50,40 +50,37 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
        .carousel-3D-swiper-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    overflow: hidden;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            overflow: hidden;
+        }
 
+        .carousel-3D-swiper {
+            width: auto;
+            height: 100%;
+        }
 
+        .carousel-3D-swiper img {
+            width: auto;
+            height: auto;
+            /* border-radius: 10px; */
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
 
-.carousel-3D-swiper {
-    width: 100%;
-    height: 100%;
-}
+        /* .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem; 
+        } */
 
-.carousel-3D-swiper img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-}
-
-/* .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem; 
-} */
-
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
 
     </style>
@@ -127,293 +124,634 @@
             </div>
         </nav>
 
-          <div class="relative vertical-section">
-            <!-- Canvas Background -->
-            <canvas id="demo-canvas" class="absolute inset-0 w-full h-full"></canvas>
-
-            <!-- Content Overlay -->
-            <div class="relative w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
-                <div class="content-center text-center" data-aos="zoom-in-right">
-                    <h1 class="p-5 font-bold text-4xl"  id="my-name">Hi! I'm Alexander Custodio =)&nbsp</h1>
-                    <p class="text-lg text-gray-600 px-10">Senior Mobile and Web Developer</p>
-                </div>
-                <div class="content-center" data-aos="fade-left" data-aos-duration="500">
-                    <img class="h-[100vh] mr-auto" src="./assets/images/me.png" alt="no image">
+        <div id="main-view">
+            <div class="relative vertical-section">
+                <!-- Canvas Background -->
+                <canvas id="demo-canvas" class="absolute inset-0 w-full h-full"></canvas>
+    
+                <!-- Content Overlay -->
+                <div class="relative w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
+                    <div class="content-center text-center" data-aos="zoom-in-right">
+                        <h1 class="p-5 font-bold text-4xl"  id="my-name">Hi! I'm Alexander Custodio =)&nbsp</h1>
+                        <p class="text-lg text-gray-600 px-10">Senior Mobile and Web Developer</p>
+                    </div>
+                    <div class="content-center" data-aos="fade-left" data-aos-duration="500">
+                        <img class="h-[100vh] mr-auto" src="./assets/images/me.png" alt="no image">
+                    </div>
                 </div>
             </div>
-        </div>
-          <!-- {{-- <div class="w-full flex p-5">
-            <h1 class="mx-auto text-3xl">Projects</h1>
-          </div> --}} -->
-          <div id="stacks" class="icon-section bg-gray-100 dark:bg-gray-900 p-10" >
-            <div class="grid grid-rows-2 grid-flow-col gap-4">
-                <div class="grid md:grid-cols-5 sm:grid-cols-2 gap-32 my-5" data-aos="zoom-in" data-aos-duration="700" >
-                    <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="no image">
-                    <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"  alt="no image">
-                    <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                    <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                    <img class="h-[100px] mx-auto" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                </div>
-                <div class="grid md:grid-cols-5 sm:grid-cols-2 gap-32 mt-5" data-aos="zoom-in" data-aos-duration="1000">
-                    <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
-                    <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-                    <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
-                    <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
-                    <img class="h-[100px] mx-auto px-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
-                </div>
+              <!-- {{-- <div class="w-full flex p-5">
+                <h1 class="mx-auto text-3xl">Projects</h1>
+              </div> --}} -->
+              <div id="stacks" class="icon-section bg-gray-100 dark:bg-gray-900 p-10" >
+                <div class="grid grid-rows-2 grid-flow-col gap-4">
+                    <div class="grid md:grid-cols-5 sm:grid-cols-2 gap-32 my-5" data-aos="zoom-in" data-aos-duration="700" >
+                        <img class="h-[100px] mx-auto" data-tooltip-target="tooltip-laravel" data-tooltip-placement="top"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="no image">
+                        <div id="tooltip-laravel" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Laravel
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto" data-tooltip-target="tooltip-tailwind" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"  alt="no image">
+                        <div id="tooltip-tailwind" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Tailwind CSS
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto" data-tooltip-target="tooltip-css3" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                        <div id="tooltip-css3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            CSS
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto px-3" data-tooltip-target="tooltip-html" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        <div id="tooltip-html" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            HTML
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto" data-tooltip-target="tooltip-js" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                        <div id="tooltip-js" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            JavaScript
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-5 sm:grid-cols-2 gap-32 mt-5" data-aos="zoom-in" data-aos-duration="1000">
+                        <img class="h-[100px] mx-auto px-3" data-tooltip-target="tooltip-php" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                        <div id="tooltip-php" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            PHP
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto px-3" data-tooltip-target="tooltip-java" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                        <div id="tooltip-java" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            JAVA
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto px-3" data-tooltip-target="tooltip-flutter" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                        <div id="tooltip-flutter" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Flutter
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto px-3" data-tooltip-target="tooltip-android" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                        <div id="tooltip-android" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Android
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="h-[100px] mx-auto px-3" data-tooltip-target="tooltip-mysql" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                        <div id="tooltip-mysql" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            mysql
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                  </div>
               </div>
-          </div>
-          <div class="sticky-container" id="projects">
-            <main>
-                <section>
-                    
+              <div class="sticky-container" id="projects">
+                <main>
+                    <section>
+                        
+                        <div class="relative w-full mx-auto">
+                            <img class="h-[100vh] w-full object-cover" src="./assets/images/bg-code.jfif" alt="no image">
+                            <div class="absolute inset-0 bg-black opacity-95"></div>
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="flex items-center justify-center min-h-screen">
+                                    <div class="w-1/2 text-center">
+                                        <h1 class="text-white text-5xl" id="">ABOUT ME AND PROJECTS</h1>
+                                        <p class="text-lg p-5 text-white">
+                                            With 8 years of professional experience as a Mobile and Web Developer, I specialize in creating innovative, scalable, and efficient solutions for modern digital challenges.  
+                                            My expertise spans across Java, Android, Flutter, Laravel, and PHP, with a strong foundation in RESTful API development and version control using Git.<br><br>
+                                            I am passionate about building intuitive mobile applications and dynamic web platforms that deliver exceptional user experiences.<br><br> 
+                                            My commitment to clean code, robust architecture, and staying updated with the latest technologies ensures that every project I undertake is impactful and future-ready.<br><br>
+                                            Let me explore you to my projects. <strong class="text-green-600" id="about-me">Scroll more ... &nbsp;</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </section>
+                  <section>
                     <div class="relative w-full mx-auto">
-                        <img class="h-[100vh] w-full object-cover" src="./assets/images/bg-code.jfif" alt="no image">
-                        <div class="absolute inset-0 bg-black opacity-95"></div>
+                        <img class="h-full w-full object-cover" src="./assets/images/makati.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-sky-500 opacity-80"></div>
                         <div class="absolute inset-0 flex items-center">
-                            <div class="flex items-center justify-center min-h-screen">
-                                <div class="w-1/2 text-center">
-                                    <h1 class="text-white text-5xl" id="">ABOUT ME AND PROJECTS</h1>
-                                    <p class="text-lg p-5 text-white">
-                                        With 8 years of professional experience as a Mobile and Web Developer, I specialize in creating innovative, scalable, and efficient solutions for modern digital challenges.  
-                                        My expertise spans across Java, Android, Flutter, Laravel, and PHP, with a strong foundation in RESTful API development and version control using Git.<br><br>
-                                        I am passionate about building intuitive mobile applications and dynamic web platforms that deliver exceptional user experiences.<br><br> 
-                                        My commitment to clean code, robust architecture, and staying updated with the latest technologies ensures that every project I undertake is impactful and future-ready.<br><br>
-                                        Let me explore you to my projects. <strong class="text-green-600" id="about-me">Scroll more ... &nbsp;</strong>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                    
-                </section>
-              <section>
-                <div class="relative w-full mx-auto">
-                    <img class="h-full w-full object-cover" src="./assets/images/makati.jpg" alt="no image">
-                    <div class="absolute inset-0 bg-sky-500 opacity-80"></div>
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="grid grid-cols-2 gap-6 flex align-center">
-                            <div class="content-center text-center">
-                                <h1 class="p-5 font-bold text-4xl text-white">MakatiZen Mobile App</h1>
-                                <p class="text-lg text-white p-5">Developed an App for Makati Citizens (MakatiZen). It aims to update the citizens of makati about what's happening in their city, giving ayuda, report an Incident or in case of emergency you can send an SOS someone in need of help and helps seniors to apply for their makatizen card.</p>
-                                <!-- stacks used -->
-                                <div class="flex justify-center space-x-5 mt-5">
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="h-[100vh] content-center">
-                                <img class="h-[80%] mx-auto" src="./assets/images/makatizen-app.png" alt="no image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-
-              </section>
-              <section>
-                <div class="relative w-full mx-auto">
-                    <img class="h-full w-full object-cover" src="./assets/images/mvpr2.jpg" alt="no image">
-                    <div class="absolute inset-0 bg-gray-700 opacity-80"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
-                            
-                            <div class="h-[100vh] content-center">
-                                <img class="h-[80%] mx-auto" src="./assets/images/mvp-mockup.png" alt="no image">
-                            </div>
-                            <div class="content-center text-center">
-                                <h1 class="p-5 font-bold text-4xl text-white">MVP Rewards App</h1>
-                                <p class="text-lg text-white p-5">Earn cash rebates, redeem points, enjoy exclusive deals and win monthly prizes with your MVP Rewards membership.
-
-                                    Track and enjoy rewards from multiple service providers you choose, all in one place. <br><br>
-                                    
-                                    
-                                    
-                                    No need to carry multiple loyalty cards to enjoy rewards for your everyday expenses. It is now all in one app.
-                                    
-                                    Get awesome gifts and surprises by collecting rewards medals.
-                                    
-                                    Unlock deals, treats, and privileges just for you when using your MVP REWARDS BADGE in this app.</p>
-
+                            <div class="grid grid-cols-2 gap-6 flex align-center">
+                                <div class="content-center text-center">
+                                    <h1 class="p-5 font-bold text-4xl text-white">MakatiZen Mobile App</h1>
+                                    <p class="text-lg text-white p-5">Developed an App for Makati Citizens (MakatiZen). It aims to update the citizens of makati about what's happening in their city, giving ayuda, report an Incident or in case of emergency you can send an SOS someone in need of help and helps seniors to apply for their makatizen card.</p>
+                                    <!-- stacks used -->
                                     <div class="flex justify-center space-x-5 mt-5">
                                         <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
                                         <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
                                         <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
                                     </div>
+                                    
+                                    
+                                </div>
+                                <div class="h-[100vh] content-center">
+                                    <img class="h-[80%] mx-auto" src="./assets/images/makatizen-app.png" alt="no image">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-              </section>
-              <section>
-                <div class="relative w-full mx-auto">
-                    <img class="h-[100vh] w-full object-cover" src="./assets/images/starosa.jpg" alt="no image">
-                    <div class="absolute inset-0 bg-red-500 opacity-80"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
-                            <div class="content-center text-center">
-                                <h1 class="p-5 font-bold text-4xl text-white">Santa Rosa App</h1>
-                                <p class="text-lg text-white p-5">The city is driven by transparent and accountable local governance, effective civil servants and empowered citizenry. <br><br>
-                                    Santa Rosa city is making effort to ensure that people have access to our services and information.
-                                </p>
-                                <div class="flex justify-center space-x-5 mt-5">
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                    
+    
+    
+                  </section>
+                  <section>
+                    <div class="relative w-full mx-auto">
+                        <img class="h-full w-full object-cover" src="./assets/images/mvpr2.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-gray-700 opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
+                                
+                                <div class="h-[100vh] content-center">
+                                    <img class="h-[80%] mx-auto" src="./assets/images/mvp-mockup.png" alt="no image">
                                 </div>
-                            </div>
-                            <div class="h-[100vh] content-center">
-                                <img class="h-[80%] mx-auto" src="./assets/images/starosa-mockup.png" alt="no image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </section>
-              <section>
-                <div class="relative w-full mx-auto">
-                    <img class="h-[100vh] w-full object-cover" src="./assets/images/pdo.jpg" alt="no image">
-                    <div class="absolute inset-0 bg-black opacity-80"></div>
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-full grid grid-cols-2 gap-6 items-center justify-content-center h-auto p-10">
-                            <!-- Text Content -->
-                            <div class="text-content text-center content-center">
-                                <h1 class="font-bold text-4xl text-white p-5">Sales Portal</h1>
-                                <p class="text-lg text-white p-5">
-                                    Sales Portal is a web-based application that helps our sales team generate quotations for the products we offer to our clients.
-                                    <br><br>
-                                    This also includes a CMS so that an admin can update all the records without the supervision of the developer.
-                                </p>
-                                <div class="flex justify-center space-x-5 mt-5">
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-                                    <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-                                </div>
-                            </div>
-                        
-                            <!-- Carousel Section -->
-                            <div class="carousel-container">
-                                <div class="carousel-3D-swiper-section">
-                                    <div class="carousel-3D-swiper">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="./assets/images/pdo-mockup.png" alt="Image 1">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./assets/images/pdo-main-mockup.png" alt="Image 2">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="./assets/images/pdo-cms-dashboard.png" alt="Image 3">
-                                            </div>
+                                <div class="content-center text-center">
+                                    <h1 class="p-5 font-bold text-4xl text-white">MVP Rewards App</h1>
+                                    <p class="text-lg text-white p-5">Earn cash rebates, redeem points, enjoy exclusive deals and win monthly prizes with your MVP Rewards membership.
+    
+                                        Track and enjoy rewards from multiple service providers you choose, all in one place. <br><br>
+                                        
+                                        
+                                        
+                                        No need to carry multiple loyalty cards to enjoy rewards for your everyday expenses. It is now all in one app.
+                                        
+                                        Get awesome gifts and surprises by collecting rewards medals.
+                                        
+                                        Unlock deals, treats, and privileges just for you when using your MVP REWARDS BADGE in this app.</p>
+    
+                                        <div class="flex justify-center space-x-5 mt-5">
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
                                         </div>
-                                        <!-- Navigation buttons -->
-                                        <!-- <div class="swiper-button-prev"></div>
-                                        <div class="swiper-button-next"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="relative w-full mx-auto">
+                        <img class="h-[100vh] w-full object-cover" src="./assets/images/starosa.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-red-500 opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-full grid grid-cols-2 gap-6 flex justify-content-center align-center">
+                                <div class="content-center text-center">
+                                    <h1 class="p-5 font-bold text-4xl text-white">Santa Rosa App</h1>
+                                    <p class="text-lg text-white p-5">The city is driven by transparent and accountable local governance, effective civil servants and empowered citizenry. <br><br>
+                                        Santa Rosa city is making effort to ensure that people have access to our services and information.
+                                    </p>
+                                    <div class="flex justify-center space-x-5 mt-5">
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                                    </div>
+                                </div>
+                                <div class="h-[100vh] content-center">
+                                    <img class="h-[80%] mx-auto" src="./assets/images/starosa-mockup.png" alt="no image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </section>
+                  <section>
+                    <div class="relative w-full mx-auto">
+                        <img class="h-[100vh] w-full object-cover" src="./assets/images/pdo.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-black opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-full grid grid-cols-2 gap-6 items-center justify-content-center h-auto p-10">
+                                <!-- Text Content -->
+                                <div class="text-content text-center content-center">
+                                    <h1 class="font-bold text-4xl text-white p-5">Sales Portal</h1>
+                                    <p class="text-lg text-white p-5">
+                                        Sales Portal is a web-based application that helps our sales team generate quotations for the products we offer to our clients.
+                                        <br><br>
+                                        This also includes a CMS so that an admin can update all the records without the supervision of the developer.
+                                    </p>
+                                    <div class="flex justify-center space-x-5 mt-5">
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-16 w-16 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                    </div>
+                                </div>
+                            
+                                <!-- Carousel Section -->
+                                <div class="carousel-container">
+                                    <div class="carousel-3D-swiper-section">
+                                        <div class="carousel-3D-swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="./assets/images/pdo-mockup.png" alt="Image 1">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="./assets/images/pdo-main-mockup.png" alt="Image 2">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="./assets/images/pdo-cms-dashboard.png" alt="Image 3">
+                                                </div>
+                                            </div>
+                                            <!-- Navigation buttons -->
+                                            <!-- <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  </section>
+                  
+                </main>
+              </div>
+              
+              <div class="vertical-section bg-white dark:bg-gray-900 dark:text-white py-12" id="contact">
+                <div class="inline-block items-center">
+                    <h1 class="text-center font-bold text-3xl text-green-500 p-5" id="thank-you">THANK YOU!</h1>
+                    <div class="w-3/4 grid sm:grid-cols gap-5 mx-auto mt-5">
+                        <!-- Contact Information Section -->
+                        <div>
+                        <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white">Let's Collaborate!</h1>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">
+                            Are you looking for a dedicated professional to bring your ideas to life? Whether building a  stunning website, <br> developing a unique project, or solving complex problems, I'm here to help. <br><br>
+    
+                            Drop me a message, and let's create something amazing together! <br>
+                            You can contact me directly via email. I'm excited to hear about your <br> project and discuss how I can contribute to its success!
+                        </p>
+                        
+                        <div class="content-center mt-5">
+                            <a href="./assets/cv_alexandercustodio_updated.pdf" class="w-auto ml-auto mt-5 p-4 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 focus:ring focus:ring-blue-300">
+                                DOWNLOAD MY RESUME
+                            </a>
+                        </div>
+                        <!-- Email Section -->
+                        <div class="mt-10">
+                            <h2 class="text-lg font-bold text-gray-800 dark:text-white">Email</h2>
+                            <div class="mt-4 flex items-center space-x-4">
+                            <div class="bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#ffffff'
+                                                        viewBox="0 0 479.058 479.058">
+                                                        <path
+                                                            d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                                                            data-original="#000000" />
+                                                    </svg>
+                            </div>
+                            <a href="mailto:custodioap04@gmail.com" class="text-blue-500 dark:text-white">
+                                <small class="block">Mail</small>
+                                <strong>custodioap04@gmail.com</strong>
+                            </a>
+                            </div>
+                        </div>
+        
+                        <!-- Social Media Section -->
+                        <div class="mt-10">
+                            <h2 class="text-lg font-bold text-gray-800 dark:text-white">Socials</h2>
+                            <ul class="mt-4 flex space-x-4">
+                            <li>
+                                <a href="https://www.facebook.com/itsmealexstacy" class="block bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#ffffff'
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
+                                        data-original="#000000" />
+                                </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/apcustodio" class="block bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#ffffff'
+                                    viewBox="0 0 511 512">
+                                    <path
+                                        d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
+                                        data-original="#000000" />
+                                </svg>
+                                </a>
+                            </li>
+                            
+                            <!-- Add similar blocks for other social icons -->
+                            </ul>
+                        </div>
+                        </div>
+        
+                        <!-- Contact Form Section -->
+                        <form class=" content-center">
+                            <!-- <input type="text" placeholder="Name" class="w-full rounded-lg py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm focus:outline-blue-500" />
+                            <input type="email" placeholder="Email" class="w-full rounded-lg py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm focus:outline-blue-500" />
+                            <input type="text" placeholder="Subject" class="w-full rounded-lg py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm focus:outline-blue-500" />
+                            <textarea placeholder="Message" rows="6" class="w-full rounded-lg px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm py-3 focus:outline-blue-500"></textarea> -->
+                            
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="mobile-view">
+            <div class="relative vertical-section">
+                <!-- Canvas Background -->
+                <canvas id="demo-canvas" class="absolute inset-x-0 w-auto h-auto"></canvas>
+    
+                <!-- Content Overlay -->
+                <div class="relative w-full h-full grid grid-row-2 gap-6 flex justify-content-center align-center">
+                    <div class="content-center text-center">
+                        <h1 class="p-5 font-bold text-4xl"  id="my-name">Hi! I'm Alexander Custodio =)&nbsp</h1>
+                        <p class="text-lg text-gray-600 px-10">Senior Mobile and Web Developer</p>
+                    </div>
+                    <div class="mx-auto h-auto">
+                        <img class="h-80" src="./assets/images/me.png" alt="no image">
+                    </div>
+                </div>
+            </div>
+              <!-- {{-- <div class="w-full flex p-5">
+                <h1 class="mx-auto text-3xl">Projects</h1>
+              </div> --}} -->
+              <div id="stacks" class="icon-section bg-gray-100 dark:bg-gray-900 p-3" >
+                <div class="grid grid-rows-2 gap-4">
+                    <div class="grid grid-cols-5">
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-laravel" data-tooltip-placement="top"  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="no image">
+                        <div id="tooltip-laravel" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Laravel
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-tailwind" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"  alt="no image">
+                        <div id="tooltip-tailwind" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Tailwind CSS
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-css3" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                        <div id="tooltip-css3" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            CSS
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-html" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                        <div id="tooltip-html" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            HTML
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-js" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                        <div id="tooltip-js" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            JavaScript
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-5">
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-php" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                        <div id="tooltip-php" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            PHP
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-java" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                        <div id="tooltip-java" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            JAVA
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-flutter" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                        <div id="tooltip-flutter" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Flutter
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-android" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                        <div id="tooltip-android" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            Android
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                        <img class="object-scale-down h-16 w-16 p-3" data-tooltip-target="tooltip-mysql" data-tooltip-placement="top" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                        <div id="tooltip-mysql" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            mysql
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+    
+              <div id="projects" class="flex flex-col">
+                <!-- ABOUT ME Section -->
+                <section>
+                    <div class="relative w-full h-auto mx-auto">
+                        <img class="h-[100vh] w-full object-cover sm:h-auto" src="./assets/images/bg-code.jfif" alt="no image">
+                        <div class="absolute inset-0 bg-black opacity-95"></div>
+                        <div class="absolute inset-0 flex items-center justify-center p-4">
+                            <div class="w-full max-w-md text-center sm:max-w-3xl">
+                                <h1 class="text-white text-3xl md:text-5xl">ABOUT ME AND PROJECTS</h1>
+                                <p class="text-base md:text-lg p-4 text-white">
+                                    With 8 years of professional experience as a Mobile and Web Developer, I specialize in creating innovative, scalable, and efficient solutions for modern digital challenges.  
+                                    My expertise spans across Java, Android, Flutter, Laravel, and PHP, with a strong foundation in RESTful API development and version control using Git.<br><br>
+                                    I am passionate about building intuitive mobile applications and dynamic web platforms that deliver exceptional user experiences.<br><br> 
+                                    My commitment to clean code, robust architecture, and staying updated with the latest technologies ensures that every project I undertake is impactful and future-ready.<br><br>
+                                    Let me explore you to my projects. <strong class="text-green-600">Scroll more ...</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- MakatiZen Mobile App Section -->
+                <section>
+                    <div class="relative w-full mx-auto">
+                        <img class="h-full w-full object-cover" src="./assets/images/makati.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-sky-500 opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center p-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="text-center p-4">
+                                    <h1 class="font-bold text-3xl md:text-4xl text-white">MakatiZen Mobile App</h1>
+                                    <p class="text-sm md:text-lg text-white">
+                                        Developed an App for Makati Citizens (MakatiZen). It aims to update the citizens of Makati about city events, distribute assistance, report incidents, and provide SOS support for emergencies. Seniors can also apply for their Makatizen cards.
+                                    </p>
+                                    <div class="flex justify-center flex-wrap gap-3 mt-4">
+                                        <!-- Technology icons -->
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                                    </div>
+                                </div>
+                                <div class="flex justify-center items-center h-auto">
+                                    <img class="h-auto max-w-full" src="./assets/images/makatizen-app.png" alt="no image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            
+                <!-- MVP Rewards Section -->
+                <section>
+                    <div class="relative w-full mx-auto">
+                        <img class="h-full w-full object-cover" src="./assets/images/mvpr2.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-gray-700 opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center p-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex justify-center items-center h-auto">
+                                    <img class="h-auto max-w-full" src="./assets/images/mvp-mockup.png" alt="no image">
+                                </div>
+                                <div class="text-center p-4">
+                                    <h1 class="font-bold text-3xl md:text-4xl text-white">MVP Rewards App</h1>
+                                    <p class="text-sm md:text-lg text-white">
+                                        Earn cash rebates, redeem points, enjoy exclusive deals, and win monthly prizes with your MVP Rewards membership. Track and enjoy rewards from multiple service providers you choose, all in one place. <br><br>
+                                        No need to carry multiple loyalty cards to enjoy rewards for your everyday expenses. It is now all in one app.
+                                    </p>
+                                    <div class="flex justify-center flex-wrap gap-3 mt-4">
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
-                </div>
-              </section>
-              
-            </main>
-          </div>
-          
-          <div class="vertical-section bg-white dark:bg-gray-900 dark:text-white py-12" id="contact">
-            <div class="inline-block items-center">
-                <h1 class="text-center font-bold text-3xl text-green-500 p-5" id="thank-you">THANK YOU!</h1>
-                <div class="w-3/4 grid sm:grid-cols gap-5 mx-auto mt-5">
-                    <!-- Contact Information Section -->
-                    <div>
-                    <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white">Let's Collaborate!</h1>
-                    <p class="mt-4 text-gray-600 dark:text-gray-300">
-                        Are you looking for a dedicated professional to bring your ideas to life? Whether building a  stunning website, <br> developing a unique project, or solving complex problems, I'm here to help. <br><br>
-
-                        Drop me a message, and let's create something amazing together! <br>
-                        You can contact me directly via email. I'm excited to hear about your <br> project and discuss how I can contribute to its success!
-                    </p>
-                    
-                    <div class="content-center mt-5">
-                        <a href="./assets/cv_alexandercustodio_updated.pdf" class="w-auto ml-auto mt-5 p-4 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 focus:ring focus:ring-blue-300">
-                            DOWNLOAD MY RESUME
-                        </a>
-                    </div>
-                    <!-- Email Section -->
-                    <div class="mt-10">
-                        <h2 class="text-lg font-bold text-gray-800 dark:text-white">Email</h2>
-                        <div class="mt-4 flex items-center space-x-4">
-                        <div class="bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#ffffff'
-                                                    viewBox="0 0 479.058 479.058">
-                                                    <path
-                                                        d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                                        data-original="#000000" />
-                                                </svg>
-                        </div>
-                        <a href="mailto:custodioap04@gmail.com" class="text-blue-500 dark:text-white">
-                            <small class="block">Mail</small>
-                            <strong>custodioap04@gmail.com</strong>
-                        </a>
+                </section>
+                <!-- santa rosa -->
+                <section>
+                    <div class="relative w-full mx-auto">
+                        <img class="h-full w-full object-cover" src="./assets/images/starosa.jpg" alt="no image">
+                        <div class="absolute inset-0 bg-red-500 opacity-80"></div>
+                        <div class="absolute inset-0 flex items-center justify-center p-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="flex justify-center items-center h-auto">
+                                    <img class="h-auto max-w-full" src="./assets/images/starosa-mockup.png" alt="no image">
+                                </div>
+                                <div class="text-center p-4">
+                                    <h1 class="font-bold text-3xl md:text-4xl text-white">Santa Rosa App</h1>
+                                    <p class="text-sm md:text-lg text-white">
+                                        The city is driven by transparent and accountable local governance, effective civil servants and empowered citizenry. <br><br>
+                                        Santa Rosa city is making effort to ensure that people have access to our services and information.
+                                    </p>
+                                    <div class="flex justify-center flex-wrap gap-3 mt-4">
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-plain.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                                        <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </section>
+                <!-- Sales Portal Section -->
+                    <section>
+                        <div class="relative w-full mx-auto">
+                            <img class="h-[100vh] w-full object-cover sm:h-auto" src="./assets/images/pdo.jpg" alt="no image">
+                            <div class="absolute inset-0 bg-black opacity-80"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                                    <!-- Text Content -->
+                                    <div class="text-center p-4">
+                                        <h1 class="font-bold text-3xl md:text-4xl text-white">Sales Portal</h1>
+                                        <p class="text-sm md:text-lg text-white">
+                                            Sales Portal is a web-based application that helps our sales team generate quotations for the products we offer to our clients.
+                                            <br><br>
+                                            This also includes a CMS so that an admin can update all the records without the supervision of the developer.
+                                        </p>
+                                        <div class="flex justify-center flex-wrap gap-3 mt-4">
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                                            <img class="object-scale-down rounded-full shadow-xl bg-gray-100 h-12 w-12 p-2" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                                        </div>
+                                    </div>
     
-                    <!-- Social Media Section -->
-                    <div class="mt-10">
-                        <h2 class="text-lg font-bold text-gray-800 dark:text-white">Socials</h2>
-                        <ul class="mt-4 flex space-x-4">
-                        <li>
-                            <a href="https://www.facebook.com/itsmealexstacy" class="block bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#ffffff'
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
-                                    data-original="#000000" />
-                            </svg>
+                                    <!-- Image Carousel -->
+                                    <div class="carousel-container flex justify-center items-center">
+                                        <div class="carousel-3D-swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="./assets/images/pdo-mockup.png" alt="Image 1">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="./assets/images/pdo-main-mockup.png" alt="Image 2">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="./assets/images/pdo-cms-dashboard.png" alt="Image 3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-900 dark:text-white py-10" id="contact">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="text-center font-bold text-3xl text-green-500 mb-5" id="thank-you">THANK YOU!</h1>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                        <!-- Contact Information Section -->
+                        <div>
+                            <h1 class="text-4xl font-extrabold text-gray-800 dark:text-white mb-4">Let's Collaborate!</h1>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Are you looking for a dedicated professional to bring your ideas to life? Whether building a stunning website, 
+                                developing a unique project, or solving complex problems, I'm here to help.
+                                <br><br>
+                                Drop me a message, and let's create something amazing together! You can contact me directly via email. I'm excited to hear about your project and discuss how I can contribute to its success!
+                            </p>
+                            <a href="./assets/cv_alexandercustodio_updated.pdf" class="inline-block mt-5 px-6 py-3 bg-green-500 text-white font-bold rounded-lg shadow hover:bg-green-600 transition">
+                                DOWNLOAD MY RESUME
                             </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/apcustodio" class="block bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#ffffff'
-                                viewBox="0 0 511 512">
-                                <path
-                                    d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                    data-original="#000000" />
-                            </svg>
-                            </a>
-                        </li>
-                        
-                        <!-- Add similar blocks for other social icons -->
-                        </ul>
+            
+                            <!-- Email Section -->
+                            <div class="mt-10">
+                                <h2 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Email</h2>
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000000' dark:fill="#ffffff"
+                                                        viewBox="0 0 479.058 479.058">
+                                                        <path
+                                                            d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                                                            data-original="#000000" />
+                                                    </svg>
+                                    </div>
+                                    <a href="mailto:custodioap04@gmail.com" class="text-blue-500 dark:text-white">
+                                        <small class="block">Mail</small>
+                                        <strong>custodioap04@gmail.com</strong>
+                                    </a>
+                                </div>
+                            </div>
+            
+                            <!-- Social Media Section -->
+                            <div class="mt-10">
+                                <h2 class="text-lg font-bold text-gray-800 dark:text-white mb-2">Socials</h2>
+                                <ul class="flex space-x-4">
+                                    <li>
+                                        <a href="https://www.facebook.com/itsmealexstacy" class="block bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000000' dark:fill="#ffffff"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M6.812 13.937H9.33v9.312c0 .414.335.75.75.75l4.007.001a.75.75 0 0 0 .75-.75v-9.312h2.387a.75.75 0 0 0 .744-.657l.498-4a.75.75 0 0 0-.744-.843h-2.885c.113-2.471-.435-3.202 1.172-3.202 1.088-.13 2.804.421 2.804-.75V.909a.75.75 0 0 0-.648-.743A26.926 26.926 0 0 0 15.071 0c-7.01 0-5.567 7.772-5.74 8.437H6.812a.75.75 0 0 0-.75.75v4c0 .414.336.75.75.75zm.75-3.999h2.518a.75.75 0 0 0 .75-.75V6.037c0-2.883 1.545-4.536 4.24-4.536.878 0 1.686.043 2.242.087v2.149c-.402.205-3.976-.884-3.976 2.697v2.755c0 .414.336.75.75.75h2.786l-.312 2.5h-2.474a.75.75 0 0 0-.75.75V22.5h-2.505v-9.312a.75.75 0 0 0-.75-.75H7.562z"
+                                        data-original="#000000" />
+                                </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/apcustodio" class="block bg-gray-200 dark:bg-gray-700 h-12 w-12 rounded-full flex items-center justify-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#000000' dark:fill="#ffffff"
+                                    viewBox="0 0 511 512">
+                                    <path
+                                        d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
+                                        data-original="#000000" />
+                                </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-    
-                    <!-- Contact Form Section -->
-                    <form class=" content-center">
-                        <!-- <input type="text" placeholder="Name" class="w-full rounded-lg py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm focus:outline-blue-500" />
-                        <input type="email" placeholder="Email" class="w-full rounded-lg py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm focus:outline-blue-500" />
-                        <input type="text" placeholder="Subject" class="w-full rounded-lg py-3 px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm focus:outline-blue-500" />
-                        <textarea placeholder="Message" rows="6" class="w-full rounded-lg px-4 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white text-sm py-3 focus:outline-blue-500"></textarea> -->
-                        
-                    </form>
                 </div>
             </div>
             
+    
+    
+    
         </div>
+
 
 
 
@@ -424,12 +762,27 @@
         <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
         <script src="./assets/js/p.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-
         <script>
-            AOS.init();
-         </script>
+            const mView = document.getElementById("main-view");
+            const mobileView = document.getElementById("mobile-view");
 
-         <script>
+            function isMobile() {
+                return window.matchMedia("(max-width: 768px)").matches;
+            }
+
+            if (isMobile()) {
+                console.log("User is on a mobile device");
+                mView.style.display = 'none'
+
+            } else {
+                console.log("User is on a desktop device");
+                mobileView.style.display = 'none';
+            }
+
+            
+            AOS.init();
+
+         
             new TypeIt("#my-name", {
                 speed: 75,
                 waintUntilVisible: true,
@@ -440,15 +793,17 @@
                 waintUntilVisible: true,
             }).go();
 
+
+
             const carousel3Dswiper = new Swiper(".carousel-3D-swiper", {
                 loop: true, // Ensures continuous loop scrolling
-                effect: "coverflow",
+                // effect: "coverflow",
                 grabCursor: true,
                 centeredSlides: true, // Keeps the current slide centered
                 slidesPerView: "auto", // Automatically adjusts slide size
                 initialSlide: 1, // Start with the second image centered
                 coverflowEffect: {
-                    rotate: 30,
+                    rotate: 0,
                     stretch: 0,
                     depth: 300,
                     modifier: 1,
@@ -463,8 +818,8 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
+        </script>
 
-         </script>
 
         <script>
 
@@ -515,5 +870,6 @@
             })();
         </script>
 
+        
     </body>
 </html>
